@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="icon" type="image/png" href="./Futuristic Tiru Logo Design.png">
+    <style>
+        body{
+            margin: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #d1f6f5ad;
+            
+        }
+        .nav{
+            background-color: cadetblue;
+            display: flex;
+            justify-content:first baseline;
+        }
+       .nav a{
+            flex: -1;
+            text-align: center;
+            padding: 5px 0;
+            margin: 10px;;
+            color: black;
+            text-decoration: none;
+        }
+        .nav a:hover{
+            background-color: rgb(218, 32, 144);
+        }
+        .nav img.logo{
+            height: 40px;
+            margin: 5px
+         
+        }
+       
+        header{
+            text-align: center;
+            color:#0f5ee6ad;
+            font-size: larger;
+            font-weight:bold;
+            text-shadow:1px 1px rgb(240, 4, 94);
+        }
+        table{
+            border-collapse: collapse;
+            border: #0b4dd2ad;
+            margin:100px;
+            box-shadow: 3px 3px salmon;
+        }
+        th,td{
+            padding: 20px;
+            background-color: color(from color srgb r g b);
+        }
+
+       #cards{
+        display: flex;
+        justify-content: center;
+
+       }
+       #card1,#card2{
+        border: 2px solid #03070fad;
+        box-shadow: 2px 2px salmon;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 20px;
+        flex: content;
+       }
+       #cardspan{
+        color: chocolate;
+       }
+       #card1:hover{
+         background-color: rgb(144, 180, 180);
+       }
+       #card2:hover{
+         background-color: rgb(124, 180, 180);
+       }
+       #cardimg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+       }
+      footer{
+        background-color: black;
+        color: aliceblue;
+        text-align: center;
+        padding: 4px;
+      }
+      #aboutimg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        box-shadow: 5px 0 salmon;
+      }
+      h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+        color: rgb(22, 67, 139);
+      }
+     #aboutpara{
+        margin:30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: medium;
+        font-weight: 400;
+     }
+    #submitbut{
+        padding: 4x;
+        margin-left: 80px;
+        background-color: #4681f7ad;
+
+    }
+    #submitbut:hover{
+        background-color: #e60830ad;
+        box-shadow: 2px 2px rgb(104, 149, 223);
+    }
+    #pbut{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4x;
+        background-color: #4681f7ad;
+        
+    }
+    #pbut:hover{
+        background-color: #e60830ad;
+        box-shadow: 2px 2px rgb(11, 68, 159);
+    }
+    #abut{
+        padding: 4x;
+        background-color: #4681f7ad;
+    }
+    #abut:hover{
+        background-color: #e60830ad;
+        box-shadow: 2px 2px rgb(11, 68, 159);
+    }
+   
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img  src="./Futuristic Tiru Logo Design.png"  alt="logo" class="logo">
+        <a href="#home">Home</a>
+        <a href="#about">ABOUTME</a>
+         <a href="#skills">SKILLS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#conact">CONACT</a>
+        <a href="#"> <input type="text" placeholder="search"></a>  
+        <a href="#"><button type="button">Search</button></a>
+    </nav>
+    <header id="home">
+        <h1>I'M TIRUMALA RAO</h1>
+        <p><i>full Stack developer</i></p>
+    </header>
+  
+    <section id="about">
+        <h1>ABOUT ME</h1>
+        <img src="./images.png" alt="myImage" title="myimage" height="200px" width="200px" loading="lazy" id="aboutimg">
+        <p id="aboutpara">I am Kotipatruini Tirumala Rao, an Information Technology student with a strong passion for Full Stack Development. I enjoy building dynamic web applications and continuously learning new technologies. My hobbies include swimming, playing cricket, and cooking, which help me stay creative and balanced. I aim to grow as a versatile developer and contribute to impactful software solutions.</P>
+       
+       <span id="aspan"> <button id="abut">Download resume</button>
+        <button id="abut">Linkedln</button>
+        </span>   
+        
+    </section>
+
+      <section id="skills">
+        <h1>SKILLS</h1>
+        <table border="1">
+            <tr>
+                <th>TYPE</th>
+                <th colspan="3">Language</th>
+            
+            </tr>
+            <tr>
+                <td>Front end</td>
+                <td>HTML</td>
+                <td>CSS</td>
+                <td>JS</td>
+            </tr>
+            <tr>
+                <td>Backend</td>
+                <td>Java(SpringBoot)</td>
+            </tr>
+            <tr>
+                <td>DATA BASE</td>
+                <td>SQL</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="projects">
+        <h1>PROJECTS</h1>
+        <div id="cards">
+            <span id="card1"><p>1. <span id="cardspan"><b>IoT-Based System for Humane Animal Deterrence and Sustainable Crop Management</b></span>- This project aims to protect crops from wildlife using an IoT-based solution that detects animal presence through sensors and image processing. It triggers species-specific sound deterrents and sends real-time alerts to farmers via a web application. The system promotes humane deterrence methods while ensuring sustainable agricultural practices.</p>
+            <img src="./images.png" alt="project1"  height="200px" width="200px" loading="lazy" title="project1" id="cardimg"> 
+            <button id="pbut">View project</button></span>
+            <span id="card2"><p>2. <span id="cardspan"><b>Translator</b></span> –Web-Based Language Translation Platform Built a full stack web application using Node.js and Google Cloud Translation API to translate text and documents across multiple languages. The platform supports real-time translation, document upload with layout preservation, and a library section for translating book content, providing an intuitive user experience for global communication.</p>
+            <img src="./images.png" alt="project2" height="200px" width="200px" loading="lazy" title="project2" id="cardimg">
+             <button id="pbut">View project</button></span>
+        </div>
+    </section>
+
+    <section id="conact">
+        <h1>CONACT</h1>
+        <form method="post">
+            <fieldset>
+                <legend>Information</legend>
+                <br>
+                <label for="name">Name</label>
+                <input type="text" minlength="3" placeholder="enter your name" required >
+                <br>
+                <br>
+                <label for="name">Email</label>
+                <input type="email" placeholder="enter your email" required>
+                <br>
+                <br>
+                <button type="submit" id="submitbut">Submit</button>
+
+            </fieldset>
+        </form>
+    </section>
+    
+   <footer>
+     <p>&copy; 2025 Kotipatruini Tirumala Rao. All rights reserved.</p>
+   </footer>
+</body>
+</html>
