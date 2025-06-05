@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+         }
+        #nav{
+            margin-top: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: rgb(240, 246, 246);
+            
+        }
+       
+        #nav a{
+            display: flex;
+            gap:40px;
+            font-size: 18px;
+            text-align: center;
+            color: black;
+            text-decoration: none;
+        }
+        #nav a:hover{
+            color: rgb(133, 16, 16);
+        }
+        #navdiv{
+            text-align:left;
+        }
+        #navdiv h1{
+            margin: 0;
+            font-size: 28px;
+        }
+        #navdiv p{
+            margin-top: 5px;
+            margin-left:50px;
+            font-size: 16px;
+            color:#333;
+        }
+        #hero1{
+            height: 100vh;
+            align-items: center;
+            text-align: center;
+           position: relative;
+        }
+        #herop{
+            /* position: absolute; */
+            font-size: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        #heroh1{
+            font-size: 200px;
+        }
+        #herobnt{
+            margin-top: 20px;
+            background-color: black;
+            color: aliceblue;
+            padding: 4px;
+        }
+        #herobnt:hover{
+            background-color: aliceblue;
+            color: black;
+        }
+        #cards{
+            display: flex;
+            justify-content:space-between;
+            background-color: rgb(247, 250, 251);
+        }
+
+        #card1,#card2,#card3{
+        margin: 20px;
+        border: 5px solid #03070fad;
+        padding: 20px;
+        
+        }
+
+        footer{
+            display: flex;
+            background-color: rgb(12, 209, 144);
+            margin-top: 50px;
+        }
+        #conactForm{
+          position: relative;
+          margin-top: 80px;
+          margin-left: 600px;
+
+        }
+        #img1{
+            float: right;
+            object-fit: cover;
+           
+        }
+        #readmore{
+            background-color: black;
+            color: aliceblue;
+            padding: 5px;
+            font-size: small;
+            border: 2px solid black;
+        }
+        #readmore:hover{
+          background-color: aliceblue;
+          color: black;
+          border: 2px solid black;
+        }
+        #freec{
+            background-color:aliceblue;
+            color: black;
+            padding: 5px;
+            font-size: small;
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+        #freec:hover{
+          background-color: black;
+          color:aliceblue;
+          border: 1px solid black;
+        }
+        #Services{
+            margin-top: 5px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+       #more{
+        display: block;
+        margin: auto;
+        padding: 4px;
+        color: aliceblue;
+        border: 2px solid black;
+        background-color: black;
+        margin-top: 30px;
+       }
+       #more:hover{
+          background-color: aliceblue;
+          color:black;
+          border: 1px solid black;
+       }
+       .bg-v{
+           position: fixed;
+           right: 0;
+           bottom: 0;
+           min-width: 100%;
+           max-width: 100%;
+           z-index: -1;
+           object-fit: cover;
+           opacity: 0.1;      
+         }
+        #Contact{
+            padding: 50px;
+        }
+        
+        #About{
+           margin-left: 20%;
+           display: flex;
+        }
+        #About h1{
+            margin-bottom: 30px;
+        }
+        #About1{
+        margin-right: 20px;
+        height: 400px;
+        width: 350px;
+        }
+        #About2{
+            height: 400px;
+            width: 250px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+          <div id="navdiv">
+                <h1>ALLAN JOHNSON</h1>
+                <P>Personal Life Coach</P>
+          </div>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#Plans">Plans</a>
+            <a href="#Guide">Guide</a>
+            <a href="#Contact">Contact</a>
+            <a href="#LogIn">Log In</a>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div id="hero1">
+        <p id="herop">AMBITION IS THE FIRST STEP TOWARDS</p>
+        <h1 id="heroh1">SUCCESS</h1>
+        <p id="herop">Now Available for Online Coaching</p>
+        <button  id="herobnt" type="button">Book Now</button>
+        </div>
+    </section>
+    <video  class="bg-v"  autoplay loop>
+         <source src="./demo1.mp4" type="video/mp4">
+        </video>
+
+    <section id="About">
+        <div id="About1">
+        <h1>ABOUT ME</h1>
+        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page.<br><br>
+This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide.
+       </p>
+       <button type="button" id="readmore">Read More</button>
+       <button type="button" id="freec">Free Consultation</button>
+    </div>
+    <div id="About2">
+       <img id="img1" src="./images.png" alt="img" loading="lazy" >
+    </div>
+</section>
+
+
+<section id="Services">
+    <h1>How I Can Help You</h1>
+    <div id="cards">
+        <span id="card1">
+            <h2>FREE CONSULTATION</h2>
+            <P>Use this area to describe one of your services.</P>
+            <hr>
+            <p>45 min</p>
+            <button type="button">Book It</button>
+        </span>
+    <span id="card2">
+            <h2>ONLINE COACHING</h2>
+            <P>Use this area to describe one of your services.</P>
+            <hr>
+            <p>45 min</p>
+            <button type="button">Book It</button>
+        </span>
+        <span id="card3">
+            <h2>SELF-IMPROVEMENT WORKSHOP</h2>
+            <P>Use this area to describe one of your services.</P>
+            <hr>
+            <p>45 min</p>
+            <button type="button">Book It</button>
+        </span>
+    </div>
+    <button type="button" id="more">More services</button>
+</section>
+
+<footer>
+    <div id="Contact">
+        <h1>Contact</h1>
+        <p>500 Terry Francine Street,<br>San Francisco, CA 94158</p>
+        <p>Tel: 123-456-7890<br>Fax: 123-456-7890</p>
+        <p>info@mysite.com</p>
+        <p>&copy;2035 by Personal Life Coach.<br>Powered and secured by Wix</p>
+    </div>
+    <div id="conactForm">
+    
+        <label for="FirstName">First Name*</label><br>
+        <input type="text" min="3" name="firstNmae" required>
+        <br>
+        <label for="FirstName">Last Name*</label><br>
+        <input type="text" min="3" name="LastName" required>
+        <br>
+        <label for="Email">Email*</label><br>
+        <input type="Email" name="Email" required>
+        <br>
+        <label for="Subject">Subject</label><br>
+        <input type="text" name="Subject">
+        <br>
+        <label for="message">Message</label><br>
+        <input  type="text" name="message">
+        <br>
+        <br>
+        <button id="submit" type="submit">Submit</button>
+
+    </div>
+</footer>
+</body>
+</html>
