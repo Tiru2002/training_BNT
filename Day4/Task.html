@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Task-4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root{
+            --main-color:rgb(134, 130, 130);
+            --para-color:rgb(17, 16, 16);
+            --ele-color:rgb(252, 248, 248);
+        }
+        #nav{
+            background-color: var(--main-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:10px;
+            flex-wrap: wrap;
+            background-color: black;
+        }
+        #nav a{
+            text-decoration: none;
+            color: var(--ele-color);
+            font-size: 1em;
+            font-weight: bold;
+            margin: 1%;
+            padding: 4px;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content{
+            display: none;
+        }
+        .dropdown-content a{
+            display: block;
+             font-size: 2em;
+        }
+          .dropdown-content a::before{
+            content: "> ";
+            color: gold;
+            font-size: 2em;
+
+        }
+        .dropdown-content a::after{
+            content: " •";
+            color: rgb(10, 117, 117);
+            font-size: 2rem;
+        }
+        .dropdown:hover .dropdown-content{
+            position: absolute;
+            z-index: 1;
+            display: block;
+            color: rgb(248, 242, 242);
+            padding: 20px;
+            background-color: black;
+            height: 30hv;
+            width: 15vw;
+        }
+        #nav img{
+            position: sticky;
+            top:1%;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            
+        }
+        #searchbar{
+            background-color: rgb(17, 17, 17);
+            position: relative;
+        }
+        #search-icon{
+            color: rgb(215, 9, 57);
+            position: absolute;
+            right: 5px;
+            top:5px;
+            
+            
+
+            
+            
+        }
+        #outer{
+            margin: 2rem;
+            border: 2px dotted black;
+            height: 150vh;
+            width: 50vw;
+            position: relative;
+        }
+        #inner{
+            border:2px  solid blue;
+            margin: 5rem;
+            height:50vh
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid pink;
+        }
+        .box1{
+            background-color: aqua;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        .box2{
+            background-color: rgba(0, 0, 255, 0.416);
+            position: fixed;
+            top:50%;
+            left:0;
+            z-index: -1;
+        }
+        .box3{
+            background-color: green;
+            position: sticky;
+            top:0;
+            
+        }
+        .box4{
+            position: relative;
+            left: 20%;
+            top:20%;
+            background-color: blueviolet;
+        }
+        .lists{
+            margin: 1rem 0;
+        }
+        .number{
+            list-style-type: decimal;
+            padding: 1rem;
+        }
+
+        ul li{
+            border: 1px solid black;
+            margin: 3rem ;
+            list-style-type: none;
+            padding:1em;
+            box-shadow: 3px 2px rgb(179, 177, 177);
+            display: inline-block;
+        }
+        ol li{
+            border: 1px solid black;
+            margin: 3rem;
+            padding:1em;
+            width: 5rem;
+            box-shadow: 3px 2px rgb(201, 48, 48);
+            display: inline-block;
+        }
+        
+       .zoom:hover {
+         transition:transform 5s ease;
+         transform: scale(1.2,1.2);
+         background-color: cadetblue;
+         
+        }
+        .zoom-ol1:hover{
+            transition:transform 5s ease;
+            transform: rotatex(80deg);
+            transform: rotatey(50deg);
+            background-color: cadetblue;
+        }
+        .zoom-ol2:hover,.zoom-ol3:hover{
+            transition:transform 5s ease;
+            transform: skew(20deg);
+            background-color: cadetblue;
+            transform: translateX();
+        }
+        .a{
+            transition:transform 5s ease;
+            animation-name: ol3;
+            animation-duration: 10s;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+        @keyframes ol3 {
+            0% {background-color: aqua; left:0px;top:0px;}
+            25% { background-color: blue; left: 200px; top: 0px;}
+            50% {background-color: blueviolet;left: 200px;top: 200px;}
+            75%{background-color: brown;left:0px;top:200px}
+            100%{background-color: chocolate; left:0;top:0px}
+        }
+        
+        
+    
+
+    
+      
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <a href="#home">Home</a></li>
+            <a href="#about">About Us</a></li>
+            <a href="#products">Products</a></li>
+            <a href="#contact">Contact Us</a></li>
+            <a href="#cart">Cart</a></li>
+            <div id="searchbar">
+            <input type="text" id="search" placeholder="Search">
+            <i id="search-icon"class="fa fa-search"></i>
+        
+            </div>
+            <div class="dropdown">
+                <a href="menu" >Menu</a>
+              <div class="dropdown-content">
+                  <a href="#">log in</a>
+                  <a href="#">log out</a>
+                  <a>settings</a>
+              </div>
+            </div>
+            <img src="./Futuristic Tiru Logo Design.png" alt="logo" loading="eager">
+        </nav>
+    </header>
+
+    <section id="outer">
+        <div id="inner">
+            <div class="box box1">box 1 absolute </div>
+            <div class="box box2">box 2 fixed</div>
+            <div class="box box3">box 3 stick</div>
+            <div class="box box4">box 4 relative</div>
+
+
+            </div>
+        </div>
+    </section>
+    
+    <section id="lists">
+        <h1>Technology 1</h1>
+        <ul>
+         <li class="zoom">HTML</li>
+         <li class="zoom">CSS</li>
+         <li class="zoom">Js</li>
+        </ul>
+
+        <h1>Technology 2</h1>
+        <ol type="1" class="number">
+            <li class="zoom-ol1">React</li>
+            <li class="zoom-ol2">Node.js</li>
+            <li class="zoom-ol3">Java</li>
+        </ol>
+
+    </section>
+    <div class="a">
+
+    </div>
+      
+</body>
+</html>

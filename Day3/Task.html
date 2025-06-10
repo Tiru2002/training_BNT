@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day1</title>
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: rgba(210, 105, 30, 0.179);
+      font-family: Arial, sans-serif;
+    }
+
+    #nav {
+      background-color: rgba(18, 24, 203, 0.814);
+      text-align: center;
+      font-weight: bold;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 5px;
+    }
+
+    #nav a {
+      text-decoration: none;
+      padding: 5px 10px;
+      color: aliceblue;
+    }
+
+    #nav a:hover {
+      background-color: rgb(220, 211, 229);
+      color: black;
+      border: 1px solid black;
+      border-radius: 50px;
+    }
+
+    #Products {
+      margin: 30px;
+    }
+
+    #ph {
+      margin-bottom: 20px;
+      color: rgb(232, 134, 5);
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      border: 3px solid black;
+      padding: 10px;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 2px 2px rgba(237, 2, 2, 0.5);
+      background-color: white;
+      text-align: center;
+    }
+
+    .card:hover {
+      background-color: rgba(20, 204, 204, 0.1);
+      box-shadow: 5px 5px rgba(2, 237, 127, 0.5);
+    }
+
+    .card img {
+      display: block;
+      margin: 10px auto;
+    }
+
+    .card h1 {
+      margin: 5px;
+      color: rgb(232, 134, 5);
+      font-size: 20px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+
+    .card button {
+      margin-top: 10px;
+      background-color: black;
+      color: aliceblue;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 50px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: aliceblue;
+      color: black;
+    }
+      footer{
+        background-color: black;
+        color: aliceblue;
+        text-align: center;
+        padding: 4px;
+      }
+    /* #sidebar{
+        flex: 1;
+         background-color: aqua; 
+        padding: 20px;
+        border-radius: 5px;
+        margin;
+        text-decoration: none;
+         }
+    .sidebar h3{
+        margin-top: 0;
+    }
+    .sidebar li{
+        list-style: none;
+        padding: 0;
+      
+    } */
+    /* .main{
+        display: flex;
+        max-width: 1200px;
+    } */
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <header>
+        <nav id="nav">
+            <a href="#Home">Home</a>
+            <a href="#Products">Products</a>
+            <a herf="#Cart">Cart</a>
+            <a href="#About">About Us</a>
+            <a herf="#Cantact">Cantact</a>
+        </nav>
+    </header>
+
+    <!-- <aside id="sidebar">
+        <h3>SideBar</h3>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#Products">Products</a></li>
+        <li><a herf="#Cart">Cart</a></li> 
+        <li><a href="#About">About Us</a></li> 
+        <li><a herf="#Cantact">Cantact</a></li>  
+    </aside> -->
+
+    <section id="Products">
+        <h1 id="ph">Products</h1>
+        <div class="cards">
+            <div id ="card1" class="card">
+                <h1 id="cardh1">pro1</h1>
+                <p id="cardp">our product is known for its outstanding quality and reliability. It is crafted using top-grade materials to ensure long-lasting performance and user satisfaction.</p>
+                <img  alt="pro" src="./images.png" height="80px" width="80px">
+                <button  id="cardbnt" type="button">Add To Cart</button>
+            </div>
+             <div id ="card2" class="card">
+                 <h1 id="cardh1">pro2</h1>
+                <p id="cardp">our product is known for its outstanding quality and reliability. It is crafted using top-grade materials to ensure long-lasting performance and user satisfaction.</p>
+                <img  alt="pro" src="./images.png" height="80px" width="80px">
+                <button  id="cardbnt" type="button">Add To Cart</button>
+            </div>
+             <div id ="card3" class="card">
+                 <h1 id="cardh1">pro3</h1>
+                <p id="cardp">our product is known for its outstanding quality and reliability. It is crafted using top-grade materials to ensure long-lasting performance and user satisfaction.</p>
+                <img  alt="pro" src="./images.png" height="80px" width="80px">
+                <button  id="cardbnt" type="button">Add To Cart</button>
+            </div>
+             <div id ="card4" class="card">
+                 <h1 id="cardh1">pro4</h1>
+                <p id="cardp">our product is known for its outstanding quality and reliability. It is crafted using top-grade materials to ensure long-lasting performance and user satisfaction.</p>
+                <img  alt="pro" src="./images.png" height="80px" width="80px">
+                <button  id="cardbnt" type="button">Add To Cart</button>
+            </div>
+             <div id ="card5"class="card">
+                 <h1 id="cardh1">pro5</h1>
+                <p id="cardp">our product is known for its outstanding quality and reliability. It is crafted using top-grade materials to ensure long-lasting performance and user satisfaction.</p>
+                <img  alt="pro" src="./images.png" height="80px" width="80px">
+                <button  id="cardbnt" type="button">Add To Cart</button>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+     <p>&copy; 2025 Kotipatruini Tirumala Rao. All rights reserved.</p>
+   </footer>
+    </div>
+</body>
+</html>
