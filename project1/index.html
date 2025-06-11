@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sphere Constructions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+      --main-color: rgba(255, 255, 255, 1);
+      --textHeaders-color: rgba(61, 89, 117, 1);
+      --text-para-color: rgba(59, 58, 58, 1);
+      --headericon: #edcd1f;
+      --nav-bg: rgb(12, 11, 11);
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      height: 15vh;
+      z-index: 1;
+      background-color: var(--nav-bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .icon {
+      background-color: var(--headericon);
+      height: 100%;
+      width: 27vw;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+
+    .icon-text p:first-child {
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .icon-text p:last-child {
+      text-transform: uppercase;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+      padding-right: 30px;
+    }
+
+    .nav a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--main-color);
+      font-weight: normal;
+    }
+    .nav a:hover{
+      color: var(--headericon);
+    }
+    .nav a:hover:active{
+       color: red;
+    }
+    .dropdown {
+       position: relative;
+    }
+    .dropdown .dropbtn {
+       text-transform: uppercase;
+       text-decoration: none;
+       color: var(--main-color);
+    }
+    .dropdown-content {
+       display: none;
+       position: absolute;
+       right: 0;
+       background-color: var(--nav-bg);
+       min-width: 150px;
+       box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+       z-index: 1;
+       flex-direction: column;
+    }
+   .dropdown-content a {
+     color: var(--main-color);
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+     text-align: left;
+    }
+
+   .dropdown-content a:hover {
+    background-color: var(--headericon);
+    color: #000;
+    }
+
+     .dropdown:hover .dropdown-content {
+       display: flex;
+     }
+
+      
+    #bg-v {
+      position: fixed;
+      min-width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #hero {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      color: var(--main-color);
+      margin: 10vh auto;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #hero a {
+      text-decoration: none;
+      color: var(--main-color);
+      font-size: 2rem;
+      margin-top: 2vh;
+    }
+
+    #services {
+      height: auto;
+      width: 100%;
+      background-color: var(--main-color);
+      padding: 50px 20px;
+      text-align: center
+    }
+
+    #services h1 {
+      display: inline-block;
+      text-align: center;
+      color: var(--textHeaders-color);
+      margin-bottom:30px;
+      border-bottom: 3px solid var(--headericon);
+    }
+
+    .services-cards {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cards {
+      width: 250px;
+      background-color: #f0f0f0;
+      border-radius: 20px;
+      text-align: center;
+      color: var(--text-para-color);
+    }
+
+    .cards img {
+      width: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    #about {
+      background-color: #f7f7f7;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #about h1 {
+      display: inline-block;
+      text-align: center;
+      color: var(--textHeaders-color);
+      margin-bottom:30px;
+      border-bottom:3px solid var(--headericon);
+    }
+
+    #about-main {
+      display: flex;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    #about-main p {
+      flex: 1;
+      text-align:justify;
+      line-height: 1.2;
+      color: var(--text-para-color);
+      margin-bottom: 10px;
+    }
+
+    #about-image {
+      flex: 0 0 300px;
+      position: sticky;
+      top: 100px;
+      height: 300px;
+      width: 50vw;
+    }
+
+    #about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-right: 1px solid var(--main-color);;
+      border-radius: 10px;
+    }
+
+    #about-footer {
+      display: flex;
+      justify-content: space-around;
+      background-color: var(--headericon);
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    #about-footer li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 10px;
+      color: #000;
+      font-weight: bold;
+      padding: 10px;
+      text-align: center;
+    }
+    #about-li{
+      border-right: 2px solid var(--main-color);
+    }
+
+    .about-footer-pm {
+      font-size: xx-large;
+      font-weight: bold;
+      color: var(--textHeaders-color);
+    }
+
+    .about-footerps {
+      font-size: 10px;
+    }
+
+    #project, #clients, #contact {
+      padding: 50px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+    #project h1{
+      display: inline-block;
+      text-align: center;
+      color: var(--textHeaders-color);
+      margin-bottom:30px;
+      border-bottom: 3px solid var(--headericon);
+    }
+    #project img {
+      width: 200px;
+      height: 180px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    #project img:hover{
+      transition:transform 3s ease ;
+      transform:scale(1.1,1.1);
+      opacity: 0.5;
+    }
+    
+
+    #clients h1{
+      display: inline-block;
+      text-align: center;
+      color: var(--textHeaders-color);
+      margin-bottom:30px;
+      border-bottom: 2px solid var(--headericon);
+    }
+
+    #clients ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      gap: 60px;
+      padding: 0;
+    }
+   
+    #clients li {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--textHeaders-color);
+    }
+    .cl1:hover::after {
+      content: "✔";
+      color: rgb(15, 167, 15);
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    .cl2:hover::after {
+      content: "✔";
+      color: rgb(218, 11, 221);
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    .cl3:hover::after {
+      content: "✔";
+      color: rgb(23, 41, 243);
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    .cl4:hover::after {
+      content: "✔";
+      color: rgb(241, 20, 87);
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    .cl5:hover::after {
+      content: "✔";
+      color: rgb(194, 220, 25);
+      margin-left: 5px;
+      font-weight: bold;
+    }
+     #contact h1{
+      display: inline-block;
+      text-align: center;
+      color: var(--textHeaders-color);
+      margin-bottom:30px;
+      border-bottom: 3px solid var(--headericon);;
+    }
+
+    iframe {
+      margin: auto;
+      display: block;
+      width: 60%;
+      height: 400px;
+    
+    }
+    #contact-container{
+        display: flex;
+        justify-content:space-evenly;
+        align-content: center;
+        margin:auto;
+        margin-top:40px;
+        gap:10vh;
+        /* flex-wrap:wrap; */
+
+    }
+    #contact-container h3{
+         color: var(--textHeaders-color);
+         margin-bottom:10px;
+    }
+    .left-contact,.right-contact{
+      flex: 1 1 400px;
+      align-items: center;
+    }
+
+    #contact-form{
+      margin-top: 30px;
+      position: relative;
+    }
+    #contact-form input,textarea{
+      background-color: rgba(199, 195, 195, 0.158);
+      margin:5px;
+      padding: 5px;
+      
+    }
+    #contact-form label{
+      font-size: small;
+      color: var(--text-para-color);
+      margin-right: 100px;
+      position: absolute;
+      left: 0;
+    }
+    #submitBnt{
+      background-color: #000;
+      color: #edcd1f;
+      font-size: small;
+      padding: 5px;
+      position: absolute;
+      left: 0;
+    }
+    #submitBnt:hover{
+      background-color: #edcd1f;
+      color:  #000000;
+      font-size: small;
+      padding: 5px;
+      position: absolute;
+      left: 0;
+    }
+    #right h3{
+         margin-top: 10px;
+    }
+
+
+    footer {
+      text-align: center;
+      background-color: var(--nav-bg);
+      color: var(--main-color);
+      padding: 20px 10px;
+    }
+
+    footer i {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: var(--main-color);
+    }
+    #chat{
+      background-color: var(--headericon);
+      padding: 6px;
+      color: #f0f0f0;
+      display: inline;
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+    } 
+  
+  </style>
+</head>
+<body>
+  <header>
+    <div class="icon">
+      <div class="icon-text">
+        <p>Sphere</p>
+        <p>Constructions</p>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#hero">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#project">Projects</a>
+      <a href="#contact">Contact</a>
+      <div class="dropdown">
+         <a href="#" class="dropbtn">Menu</a>
+         <div class="dropdown-content">
+           <a href="#">Login</a>
+           <a href="#">SignUp</a>
+           <a href="#">Planning</a>
+           <a href="#">Design</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <video autoplay muted loop id="bg-v">
+      <source src="./bg.mp4" type="video/mp4">
+    </video>
+
+    <section id="hero">
+      <h1>LEADERS IN QUALITY</h1>
+      <h1>CONSTRUCTION AND</h1>
+      <h1>INFRASTRUCTURE</h1>
+      <a href="#services">&#x25BD;</a>
+    </section>
+
+    <section id="services">
+      <h1>Services</h1>
+      <div class="services-cards">
+        <div class="cards">
+          <img src="./site3.jpeg" alt="Service 1">
+          <h2>Preconstruction Planning</h2>
+          <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+        </div>
+        <div class="cards">
+          <img src="./site1.jpeg" alt="Service 2">
+          <h2>Architectural Modelling</h2>
+          <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+        </div>
+        <div class="cards">
+          <img src="./site2.jpeg" alt="Service 3">
+          <h2>Construction Management</h2>
+          <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h1>About</h1>
+      <div id="about-main">
+        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</p>
+        <div id="about-image">
+          <img src="./image2.jpg" alt="About image">
+        </div>
+      </div>
+      <div id="about-footer">
+        <ul>
+          <li id="about-li"><p class="about-footer-pm">2035</p><p class="about-footerps">Year Established</p></li>
+          <li id="about-li"><p class="about-footer-pm">206</p><p class="about-footerps">Projects Completed</p></li>
+          <li id="about-li"><p class="about-footer-pm">870</p><p class="about-footerps">Contractors Appointed</p></li>
+          <li><p class="about-footer-pm">26</p><p class="about-footerps">Awards Won</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="project">
+      <h1>Our Projects</h1>
+      <div id="project-img" style="text-align:center;">
+        <img src="./site1.jpeg" alt="Project 1">
+        <img src="./site2.jpeg" alt="Project 2">
+        <img src="./site3.jpeg" alt="Project 3">
+        <img src="./site4.jpeg" alt="Project 4">
+      </div>
+      <!-- <div class="uperlayer">
+         <p>project</p>
+         <i class="fas fa-heart"></i>
+         <i class="fas fa-share"></i>
+      </div>  -->
+    </section>
+
+    <section id="clients">
+      <h1>Our Clients</h1>
+      <ul>
+        <li class="cl1">TIPOX</li>
+        <li class="cl2">EXCIPIA</li>
+        <li class="cl3">VIDE</li>
+        <li class="cl4">DEHOTEL</li>
+        <li class="cl5">UMBER & CO</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h1>Contact Us</h1>
+      <iframe src="https://maps.google.com/maps?q=Hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      <div id="contact-container">
+        <div class="left-contact">
+          <h3>Inquiries</h3>
+          <p>For any inquiries, questions or commendations, please call: 123-456-7890 or fill out the following form</p>
+          <div id="contact-form">
+            <h3>Contact Us</h3>
+            <label for="first-name">First Name*</label><br>
+            <input type="text" id="fristname" name="firstname" required minlength="3"><br>
+            <label for="Last-name">Last Name*</label><br>
+            <input type="text" id="lastname" name="lastname" required><br>
+            <label for="Email">Email*</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="subject">Subject</label><br>
+            <input type="text" id="subject" name="subject"><br>
+            <label for="message">Messsage</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <button type="submit" id="submitBnt">Submit</button>
+          </div>
+        </div>
+        <div class="right-contact">
+          <div id="right-top">
+          <h3>Head Office</h3>
+          <p>500 Terry Francine Street</p>
+          <p>San Francisco, CA 94158</p>
+          <br>
+          <p>
+           info@mysite.com
+           Tel: 123-456-7890
+           Fax: 123-456-7890
+          </p>
+          </div>
+          <div id="right">
+            <h3>Employment</h3>
+            <p>To apply for a job with Sphere Constuctions, please send a cover letter together with your C.V. to: info@mysite.com</p>
+            <span>
+              Get a quote: 123-456-7890
+            </span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="chat">
+    <i class="fas fa-comment "></i>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Sphere Constructions. Powered and secured by Wix</p>
+    <i class="fab fa-facebook-f"></i>
+    <i class="fab fa-instagram"></i>
+    <i class="fab fa-twitter"></i>
+  </footer>
+</body>
+</html>
