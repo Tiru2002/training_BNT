@@ -14,6 +14,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      cursor: none;
     }
 
     :root {
@@ -22,6 +23,11 @@
       --text-para-color: rgba(59, 58, 58, 1);
       --headericon: #edcd1f;
       --nav-bg: rgb(12, 11, 11);
+    }
+    ::selection{
+      background-color:rgb(239, 151, 151);
+      color: #8b8787;
+      text-shadow: 2px 1px black;
     }
 
     header {
@@ -264,18 +270,19 @@
       margin-bottom:30px;
       border-bottom: 3px solid var(--headericon);
     }
-    #project img {
+    /* #project img {
+      display: none;
       width: 200px;
       height: 180px;
       margin: 10px;
       border-radius: 8px;
-    }
+  }*/
     #project img:hover{
       transition:transform 3s ease ;
       transform:scale(1.1,1.1);
       opacity: 0.5;
     }
-    
+     
 
     #clients h1{
       display: inline-block;
@@ -422,10 +429,63 @@
       bottom: 5px;
       right: 5px;
     } 
+    /* input[type="radio"]{
+      display: none;
+    } */
+    #project-img img{
+      display: none;
+      width: 80%;
+      max-width: 400px;
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    #page1:checked ~#project #img1,
+    #page2:checked ~#project #img2,
+    #page3:checked ~#project #img3,
+    #page4:checked ~#project #img4{
+      display: inline-block;
+    }
+     #pagination{
+      margin-top: 20px;
+    }
+      #pagination label {
+      display: inline-block;
+      padding: 8px 14px;
+      margin: 0 5px;
+      background-color: #030404;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    #pagination label:hover {
+      background-color: #b8bbbe;
+      color: #000;
+    }
+
+    #cus-cursor {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border: 2px solid black;
+      background-color: rgba(10, 212, 128, 0.489);
+      margin: 0;
+      border-radius: 50%;
+      pointer-events: none; /* So it doesn't block clicks */
+      z-index: 20;
+      transition: transform 0.05s linear;
+      mix-blend-mode: difference;
+    }
+
   
   </style>
 </head>
 <body>
+  <div id="cus-cursor"></div>
   <header>
     <div class="icon">
       <div class="icon-text">
@@ -435,7 +495,7 @@
     </div>
     <nav class="nav">
       <a href="#hero">Home</a>
-      <a href="#services">Services</a>
+      <a href="#">Services</a>
       <a href="#about">About</a>
       <a href="#project">Projects</a>
       <a href="#contact">Contact</a>
@@ -456,7 +516,7 @@
       <source src="./bg.mp4" type="video/mp4">
     </video>
 
-    <section id="hero">
+    <section id="hero" class="hero">
       <h1>LEADERS IN QUALITY</h1>
       <h1>CONSTRUCTION AND</h1>
       <h1>INFRASTRUCTURE</h1>
@@ -501,20 +561,28 @@
         </ul>
       </div>
     </section>
+      <input type="radio" name="page" id="page1" checked>
+      <input type="radio" name="page" id="page2" >
+      <input type="radio" name="page" id="page3" >
+      <input type="radio" name="page" id="page4" >
 
-    <section id="project">
+      <section id="project">
       <h1>Our Projects</h1>
-      <div id="project-img" style="text-align:center;">
-        <img src="./site1.jpeg" alt="Project 1">
-        <img src="./site2.jpeg" alt="Project 2">
-        <img src="./site3.jpeg" alt="Project 3">
-        <img src="./site4.jpeg" alt="Project 4">
+
+      <div id="project-img">
+        <img src="./site1.jpeg" alt="Project 1" id="img1">
+        <img src="./site2.jpeg" alt="Project 2" id="img2">
+        <img src="./site3.jpeg" alt="Project 3" id="img3">
+        <img src="./site4.jpeg" alt="Project 4" id="img4">
       </div>
-      <!-- <div class="uperlayer">
-         <p>project</p>
-         <i class="fas fa-heart"></i>
-         <i class="fas fa-share"></i>
-      </div>  -->
+
+     <div id="pagination">
+       <label for="page1">1</label>
+        <label for="page2">2</label>
+        <label for="page3">3</label>
+        <label for="page4">4</label>
+
+     </div>
     </section>
 
     <section id="clients">
@@ -582,5 +650,13 @@
     <i class="fab fa-instagram"></i>
     <i class="fab fa-twitter"></i>
   </footer>
+  <script>
+    const cursor = document.getElementById('cus-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.pageX - 10}px`;
+      cursor.style.top = `${e.pageY - 10}px`;
+    });
+  </script>
 </body>
 </html>
