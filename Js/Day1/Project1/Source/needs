@@ -1,0 +1,19 @@
+What it does:
+
+Takes input from the user (a task name)
+
+Adds the task to a list when a button is clicked
+
+Lets the user click on the task to mark it as "done"
+
+Uses getElementById, textContent, classList.toggle, and functions
+
+Concepts involved:
+
+HTML input fields and buttons
+
+JavaScript DOM manipulation
+
+JavaScript functions and events
+
+CSS class toggling for "completed" tasks

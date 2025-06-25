@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>child element js</title>
+</head>
+<body>
+
+    <div id="main">
+        <h1>headging</h1>
+        <h1>headging</h1>
+        <h1>headging</h1>
+        <h1>headging</h1>
+        <h1>headging</h1>
+    </div>
+    
+    <script>
+        let main = document.getElementById("main");
+        console.log(main.parentNode);//body will be the parent
+        let firstChild=main.firstElementChild;
+        firstChild.style.color = "red";
+        let lastChild = main.lastElementChild;
+        lastChild.style.color="pink";
+
+        let fisrtSibing=firstChild.nextElementSibling;
+        fisrtSibing.style.color="blue";
+
+        let lastSibing=lastChild.previousElementSibling;
+        lastSibing.style.color="green";
+    </script>
+</body>
+</html>

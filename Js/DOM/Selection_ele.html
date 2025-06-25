@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selection_element js</title>
+    <style>
+        div{
+            background-color: aqua;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="divid" class="divClass" name="divname"></div>
+    
+
+    <script>
+        // get the element by id
+        let eleId=document.getElementById("divid");
+        eleId.innerHTML="<h1>div by id</h1>"
+
+        //get the element by class
+        let eleClass=document.getElementsByClassName("divClass");
+        eleClass[0].innerHTML+="<p>eleClass by class</p>";
+        eleClass[0].style.backgroundColor+="red";
+
+        //get the element by name
+        let eleName=document.getElementsByName("divname");
+        eleName[0].innerHTML+="div my name";
+
+        //get the element by tag name
+        let eleTag=document.getElementsByTagName("div");
+        eleTag.className+="bytag";
+        console.log(eleTag.className);
+
+        //query selector
+        let eleQuery=document.querySelector("#divid");
+        eleQuery.style.color="aliceblue";
+
+        //querySelectorAll
+        let eleQueryAll=document.querySelectorAll(".divClass");
+        
+        eleQueryAll.forEach(function(element) {
+         element.style.padding = "10px";
+        });
+    </script>
+    
+</body>
+</html>

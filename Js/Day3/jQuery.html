@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Task Modular</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    .active {
+      color: red;
+      font-weight: bold;
+    }
+    #box {
+      width: 40px;
+      height: 40px;
+      background: blue;
+      position: relative;
+      margin-top: 10px;
+    }
+    #panel {
+      display: none;
+      background: lightgray;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    button {
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 1. Form Input Get/Set -->
+<section>
+  <label>Name: </label>
+  <input type="text" id="name">
+  <button id="get">Get</button>
+  <button id="set">Set</button>
+  <p id="out"></p>
+</section>
+<script>
+  $('#get').click(() => $('#out').text($('#name').val()));
+  $('#set').click(() => $('#name').val("Tiru"));
+</script>
+
+<!-- 2. HTML Content Get/Set -->
+<section>
+  <div id="html">Hello <b>World</b></div>
+  <button id="getHtml">Get HTML</button>
+  <button id="setHtml">Set HTML</button>
+</section>
+<script>
+  $('#getHtml').click(() => alert($('#html').html()));
+  $('#setHtml').click(() => $('#html').html("New <i>Text</i>"));
+</script>
+
+<!-- 3. Toggle Class -->
+<section>
+  <p id="txt">Class Example</p>
+  <button id="toggleClass">Toggle Class</button>
+</section>
+<script>
+  $('#toggleClass').click(() => $('#txt').toggleClass('active'));
+</script>
+
+<!-- 4. Click Event -->
+<section>
+  <button id="click">Click Me</button>
+  <p id="msg"></p>
+</section>
+<script>
+  $('#click').click(() => $('#msg').text("Button Clicked!"));
+</script>
+
+<!-- 5. Show/Hide Elements -->
+<section>
+  <p id="p">Hi there!</p>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+</section>
+<script>
+  $('#hide').click(() => $('#p').hide());
+  $('#show').click(() => $('#p').show());
+</script>
+
+<!-- 6. Animate & Slide -->
+<section>
+  <button id="animate">Animate Box</button>
+  <div id="box"></div>
+</section>
+<script>
+  $('#animate').click(() => $('#box').animate({ left: '100px' }, 1000));
+  
+  
+</script>
+
+</body>
+</html>

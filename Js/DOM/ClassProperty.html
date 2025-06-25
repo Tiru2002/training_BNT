@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Name js </title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+           hello
+    </div>
+    
+    <script>
+        let div = document.querySelector('#div1');
+        div.className="div1class";
+        console.log(div.className);//return class name
+
+        div.className+="div2Class";
+        console.log(div.className);//return class name
+
+
+        //classList
+        console.log(div.classList);//return all calss name
+        div.classList.add("div2,div3");
+
+        console.log(div.classList);
+        
+        let check= div.classList.contains("div3")
+        console.log(check);//return true
+       
+    </script>
+</body>
+</html>

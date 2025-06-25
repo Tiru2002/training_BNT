@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule | EventX 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <style>
+    body{
+      padding-top:70px;
+      cursor: none;
+    }
+    ::selection{
+      background-color: rgb(232, 128, 217);
+      color: black;
+    }
+    .timeline {
+      margin-left: 20px;
+      border-left: 3px solid #0a0b0b;
+      padding-left: 20px;
+      position: relative;
+    }
+    .timeline-event {
+      margin-bottom: 2rem;
+    
+    }
+    .timeline-event::before {
+      content: "";
+      position: absolute;
+      left: -9px;
+      width: 16px;
+      height: 16px;
+      background-color: #c83131;
+      border-radius: 50%;
+    }
+    .timeline-event:hover{
+          padding: 5px;
+          box-shadow: 2px 2px 2px 2px dimgrey;
+    }
+    .timeline-event:hover::before{
+         background-color: #64ed0f;
+    }
+     #cus-cursor {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border: 2px solid black;
+      background-color: rgba(10, 212, 128, 0.489);
+      margin: 0;
+      border-radius: 50%;
+      border:2px solid rgb(177, 172, 172);
+      pointer-events: none;
+      z-index: 1040;
+      transition: transform 0.05s linear;
+      mix-blend- : difference;
+    }
+  </style>
+</head>
+<body>
+<div id="cus-cursor"></div>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning" href="index.html">EventX</a>
+    <button class="navbar-toggler btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+        <li class="nav-item"><a class="nav-link text-warning active" href="#">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container mt-4 mb-5">
+  <h2 class="text-center fw-bold">Event Schedule</h2>
+  <div class="row justify-content-center mt-5 ">
+  <div class="col-md-4 col-lg-3">
+  <div class="timeline mt-5">
+    <div class="timeline-event">
+      <h5>09:00 AM – 10:00 AM</h5>
+      <p><strong>Opening Ceremony</strong><br>Main Hall | Hosted by Event Organizers 
+      <span class="badge bg-danger">New!</span></p>
+    </div>
+    <div class="timeline-event">
+      <h5>10:15 AM – 11:00 AM</h5>
+      <span><strong>Future of AI</strong><br>Dr. Asha Mehta | Conference Room A</span>
+    </div>
+    <div class="timeline-event">
+      <h5>11:15 AM – 12:00 PM</h5>
+      <p><strong>Startup Strategies</strong><br>Mr. Ravi Kumar | Conference Room B</p>
+    </div>
+    <div class="timeline-event">
+      <h5>12:00 PM – 01:00 PM</h5>
+      <p><strong>Networking Lunch</strong><br>Dining Area</p>
+    </div>
+    <div class="timeline-event">
+      <h5>01:00 PM – 02:00 PM</h5>
+      <p><strong>Women in Tech</strong><br>Ms. Nidhi Sharma | Auditorium</p>
+    </div>
+    <div class="timeline-event">
+      <h5>02:15 PM – 03:00 PM</h5>
+      <p><strong>Workshop: Build Your First App</strong><br>TechNova Team | Lab Room 3 
+        <span class="badge bg-danger">New !</span></p>
+    </div>
+    <div class="timeline-event">
+      <h5>03:15 PM – 04:00 PM</h5>
+      <p><strong>Closing Ceremony</strong><br>Main Hall | Organizing Committee</p>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  
+  <div class="text-center mt-5">
+    <a href="register.html" class="btn btn-primary  btn-outline-warning btn-lg">Register for Sessions</a>
+  </div>
+</section>
+
+ <footer class="bg-dark text-white pt-4 pb-3">
+  <div class="container-fluid text-center">
+        <h5>&copy;EventX 2025</h5>
+        <p>Connecting innovators, leaders, and learners for a future-ready world. Join us this May in Chennai.</p>
+    </div>
+  </footer>
+
+  <script>
+   const cursor = document.getElementById('cus-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.pageX - 10}px`;
+      cursor.style.top = `${e.pageY - 10}px`;
+    });
+  </script>
+</body>
+</html>

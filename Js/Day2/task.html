@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+<body>
+<script>
+    let score = 0;
+    let input=[]
+    alert("Let's play!");
+    function play() {
+        let user = prompt("Enter your choice \nfrom here false, 0, '', null, undefined, Hello, -1, [], {}, -1\n you have 5 chances");
+        input.push(user);
+        if (user === null) {
+            score -= 1; 
+        } else if ( user === "false" || user === "0" ||user === "" ||user === "null" ||user === "undefined") {
+            score -= 1;
+        } else if ( user === "true" || user === "1" ||user === "Hello" ||user === "[]" ||user === "{}" ||user === "-1") {
+            score += 1;
+        } else {
+            alert("Invalid input");
+        }
+    }
+
+    for (let i = 0; i < 5; i++) {
+        play();
+        confirm("next round");
+    }
+    alert("you are input are "+input);
+    alert("Your score = " + score + "/5");
+</script>
+
+</body>
+</html>

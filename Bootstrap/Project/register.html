@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>register | EventX 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  defer></script>
+  <style>
+      body{
+        padding-top:70px;
+        cursor: none;
+        border:2px solid rgb(177, 172, 172);
+      }
+      ::selection{
+        background-color: rgb(232, 128, 217);
+        color: black;
+      }
+      form:focus-within{
+        border: 2px solid darkgray;
+        box-shadow: 0px 0px 8px rgb(212, 199, 7);
+      }
+       #cus-cursor {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border: 2px solid black;
+      background-color: rgba(10, 212, 128, 0.489);
+      margin: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1040;
+      transition: transform 0.05s linear;
+      mix-blend-mode: difference;
+    }
+    
+  </style>
+</head>
+<body>
+<div id="cus-cursor"></div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning" href="index.html">EventX</a>
+    <button class="navbar-toggler btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+        <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link text-warning active" href="#">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container py-5 mt-4">
+  <h2 class="text-center mb-4">Register for EventX 2025</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form action="" method="POST">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullName" name="Full Name" required>
+        </div>
+        <div class="mb-3">
+          <label for="emailAddress" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="emailAddress" name="Email" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="Phone" required>
+        </div>
+        <div class="mb-3">
+          <label for="interest" class="form-label">What are you interested in?</label>
+          <select class="form-select" id="interest" name="Interest">
+            <option>Tech Talks</option>
+            <option>Workshops</option>
+            <option>Networking</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message (optional)</label>
+          <textarea class="form-control" id="message" rows="3" name="Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+ <footer class="bg-dark text-white pt-4 pb-3">
+  <div class="container-fluid text-center">
+        <h5>&copy;EventX 2025</h5>
+        <p>Connecting innovators, leaders, and learners for a future-ready world. Join us this May in Chennai.</p>
+    </div>
+  </footer>
+
+  <script>
+   const cursor = document.getElementById('cus-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.pageX - 10}px`;
+      cursor.style.top = `${e.pageY - 10}px`;
+    });
+  </script>
+</body>
+</html>

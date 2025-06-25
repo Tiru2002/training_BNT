@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .try{
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>hello</p>
+    </div>
+    <button onclick="change()">TRY</button>
+    <button onclick="change2()">children</button>
+
+    <script>
+        let change = () => {
+            let container = document.getElementById("container");
+            let result = container.textContent;  
+            console.log(result);
+            container.textContent = "changed";
+            container.style.backgroundColor="red";
+            container.classList.add("try");
+            container.outerHTML+="<h1>Heading</h1>";
+        }
+
+        let change2 =()=>{
+            let container = document.getElementById("container");
+            let children=container.children;
+            console.log(children);
+            children.firstChild
+        }
+
+    </script>
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation</title>
+</head>
+<body>
+
+    <div>
+
+    </div>
+
+
+    <script>
+        let div = document.querySelector('div');
+        let para= document.createElement("p");
+        para.textContent = "Hello, World!";
+        para.style.color="red";
+        div.appendChild(para);
+        div.innerHTML+="hello for innerHTML";
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js task 1</title>
+</head>
+<body>
+
+    <script>
+        function play(){
+            alert("let's paly rock paper scissors");
+
+            let choice=["rock","paper","scissors"];
+
+            let user=prompt("Enter rock,paper, scissors").toLowerCase();
+
+            if(!choice.includes(user)){
+                alert("invalid choice");
+            }
+
+            let computer =choice[Math.floor(Math.random()*3)];
+            console.log(choice[Math.floor(Math.random()*3)]);
+            alert("you choice: "+user+"\ncomputer choice: "+computer);
+            if(computer===user){
+                alert("it's a tie");
+            }
+            else if((user==="rock" &&computer==="scissors")||
+                    (user==="paper" &&computer==="rock")||
+                    (user==="scissors"&& computer==="paper")
+        ) {
+            alert("you win");
+        }
+        else{
+            alert("you lose");
+        }
+         if(confirm("play again")){
+          play();
+        }
+         else{
+         alert("Thanks for playing");
+        }
+
+        }
+        play();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | EventX 2025</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <style>
+    body {
+      padding-top: 70px;
+      cursor: none;
+      border:2px solid rgb(177, 172, 172);
+    }
+    ::selection{
+      background-color: rgb(232, 128, 217);
+      color: black;
+    }
+     #cus-cursor {
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      border: 2px solid black;
+      background-color: rgba(10, 212, 128, 0.489);
+      margin: 0;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1040;
+      transition: transform 0.05s linear;
+      mix-blend-mode: difference;
+    }
+    #contact-icon i{
+       font-size: 1.5rem;
+       color: black;
+    }
+  </style>
+</head>
+<body>
+<div id="cus-cursor"></div>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning" href="index.html">EventX</a>
+    <button class="navbar-toggler btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+        <li class="nav-item"><a class="nav-link" href="schedule.html">Schedule</a></li>
+        <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+        <li class="nav-item"><a class="nav-link text-warning active" href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="container py-5">
+  <h2 class="text-center mb-4">Contact Us</h2>
+  <div class="row">
+    <div class="col-md-6">
+      <form action="Name " method="">
+        <div class="mb-3">
+          <label for="Name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="Name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="Email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="Email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="Message" class="form-label">Message</label>
+          <textarea class="form-control" id="Message" rows="4" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-sm">Send Message</button>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <h5 class="h5">Event Venue</h5>
+      <p>Chennai Trade Centre, Chennai – 600089<br>India</p>
+
+      <h5 class="h5">Email</h5>
+      <p>support@eventx2025.com</p>
+
+      <h5 class="h5">Phone</h5>
+      <p>+91 98765 43210</p>
+      <div id="contact-icon">
+      <h5 class="h5">Follow Us</h5>
+      <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <footer class="bg-dark text-white pt-4 pb-3">
+  <div class="container-fluid text-center">
+        <h5>&copy;EventX 2025</h5>
+        <p>Connecting innovators, leaders, and learners for a future-ready world. Join us this May in Chennai.</p>
+    </div>
+  </footer>
+  <script>
+   const cursor = document.getElementById('cus-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.pageX - 10}px`;
+      cursor.style.top = `${e.pageY - 10}px`;
+    });
+  </script>
+</body>
+</html>
