@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test-2</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"
+    defer
+  ></script>
+  <style>
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .q {
+      background-color: black;
+      color: aliceblue;
+      height: 40px;
+      font-size: x-large;
+      text-align: center;
+      padding: 5px;
+      margin: 10px;
+    }
+    .box {
+      border: 1px solid #aaa;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    .px-box {
+      width: 200px;
+      font-size: 16px;
+      background-color: #f0f8ff;
+    }
+    .em-box {
+      font-size: 1.5em;
+      background-color: #e0ffe0;
+    }
+    .rem-box {
+      font-size: 2rem;
+      background-color: #fff0f5;
+    }
+    .percent-box {
+      width: 50%;
+      background-color: #fffacd;
+    }
+    .container {
+      width: 400px;
+      border: 1px dashed #999;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="q">Bootstrap Question 1</div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-1">
+    <div class="container bg-dark">
+      <a class="navbar-brand fw-bold" href="#">Nav</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="q">Bootstrap Question 2</div>
+
+
+  <section class="container-fluid py-5 mt-3">
+    <div class="row g-4">
+   
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card">
+          <img src="https://plus.unsplash.com/premium_photo-1690579805307-7ec030c75543?fm=jpg&q=60&w=3000" class="rounded" alt="img1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lorem, ipsum.</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur...</p>
+            <button type="button" class="btn btn-dark btn-sm">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card">
+          <img src="https://t3.ftcdn.net/jpg/02/99/04/20/360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg" class="rounded" alt="img2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lorem, ipsum.</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur...</p>
+            <button type="button" class="btn btn-dark btn-sm">Read More</button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-sm-12 col-lg-4">
+        <div class="card">
+          <img src="data:image/jpeg;base64,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" class="rounded" alt="img3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lorem, ipsum.</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur...</p>
+            <button type="button" class="btn btn-dark btn-sm">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="q">JS Question 1 (check console)</div>
+  <div id="js1"></div>
+
+  <div class="q">JS Question 2 (check console)</div>
+  <div id="js2"></div>
+
+  <div class="q">JS Question 3 (check console)</div>
+  <div id="js3"></div>
+
+  <div class="q">JS Question 4 (check console)</div>
+  <div id="js4"></div>
+
+  <div class="q">JS Question 5 (check console)</div>
+  <div id="js5"></div>
+
+  <script>
+    console.log("Question 1:");
+    function mostRepeatedChar(str) {
+      const charMap = {};
+      let maxChar = '';
+      let maxCount = 0;
+      for (let char of str) {
+        charMap[char] = (charMap[char] || 0) + 1;
+        if (charMap[char] > maxCount) {
+          maxCount = charMap[char];
+          maxChar = char;
+        }
+      }
+      return maxChar;
+    }
+    const res1 = mostRepeatedChar("aabbbcc");
+    console.log(res1);
+    document.getElementById("js1").innerHTML = "Most repeated character: " + res1;
+
+    console.log("Question 2:");
+    function findUniqueElements(arr1, arr2) {
+      const set1 = new Set(arr1);
+      const set2 = new Set(arr2);
+      const uniqueToArr1 = arr1.filter(item => !set2.has(item));
+      const uniqueToArr2 = arr2.filter(item => !set1.has(item));
+      return [...uniqueToArr1, ...uniqueToArr2];
+    }
+    const arr1 = [1, 2, 3];
+    const arr2 = [2, 4, 5];
+    const res2 = findUniqueElements(arr1, arr2);
+    console.log(res2);
+    document.getElementById("js2").innerHTML = "Unique elements: " + res2.join(", ");
+
+    console.log("Question 3:");
+    function findLongestWord(sentence) {
+      const words = sentence.split(" ");
+      let longest = "";
+      for (const word of words) {
+        if (word.length > longest.length) {
+          longest = word;
+        }
+      }
+      return longest;
+    }
+    const res3 = findLongestWord("JavaScript is powerful");
+    console.log(res3);
+    document.getElementById("js3").innerHTML = "Longest word: " + res3;
+
+    console.log("Question 4:");
+    function chain(initialValue) {
+      return {
+        value: initialValue,
+        add(n) {
+          this.value += n;
+          return this;
+        },
+        subtract(n) {
+          this.value -= n;
+          return this;
+        },
+        result() {
+          return this.value;
+        }
+      };
+    }
+    const res4 = chain(5).add(2).subtract(1).result();
+    console.log(res4);
+    document.getElementById("js4").innerHTML = "Chained result: " + res4;
+
+    console.log("Question 5:");
+    console.log("Before declaration:", x);
+    console.log(add(5, 6));
+    var x = 10;
+    function add(a, b) {
+      return a + b;
+    }
+    document.getElementById("js5").innerHTML = "Question 5 Output: See console for hoisting behavior.";
+  </script>
+
+  <div class="q">CSS Question 1</div>
+  <div class="box px-box">
+    <p><strong>Pixels (px):</strong> This box has a width of 200px and font-size of 16px. It's an absolute unit and doesn’t respond to screen size changes.</p>
+  </div>
+  <div class="box em-box">
+    <p><strong>Ems (em):</strong> This text is 1.5 times the font-size of its parent. `em` scales based on inherited font size.</p>
+  </div>
+  <div class="box rem-box">
+    <p><strong>Rems (rem):</strong> This font is 2 times the root `<html>` font size. `rem` ensures consistency across elements.</p>
+  </div>
+  <div class="container">
+    <div class="box percent-box">
+      <p><strong>Percent (%):</strong> 50% of the parent container's width (400px), so it is 200px wide.</p>
+    </div>
+  </div>
+</body>
+</html>
